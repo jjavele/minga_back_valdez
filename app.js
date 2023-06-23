@@ -1,4 +1,6 @@
 import 'dotenv/config.js';                 //configura las variables de enterono de la aplicación
+console.log(process.env.LINK_DB)
+import './config/db.js';
 //import createError from'http-errors';    //módulo necesario para crear/configurar errores en nuestro servidor (NO LO VAMOS A UTILIZAR)
 import express from 'express';             //módulo necesario para levantar y configurrar un servidor
 import path from 'path';                   //módulo necesario para conocer la ubicación de nuestro servidor
