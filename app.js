@@ -1,21 +1,21 @@
-import 'dotenv/config.js';                 //configura las variables de enterono de la aplicación
+import 'dotenv/config.js'                 //configura las variables de enterono de la aplicación
 console.log(process.env.LINK_DB)
-import './config/db.js';
+import './config/db.js'
 //import createError from'http-errors';    //módulo necesario para crear/configurar errores en nuestro servidor (NO LO VAMOS A UTILIZAR)
-import express from 'express';             //módulo necesario para levantar y configurrar un servidor
-import path from 'path';                   //módulo necesario para conocer la ubicación de nuestro servidor
+import express from 'express'             //módulo necesario para levantar y configurrar un servidor
+import path from 'path'                   //módulo necesario para conocer la ubicación de nuestro servidor
 //import cookieParser from'cookie-parser'; //módulo para configurar cookies (NO VAMOS A MANEJAR COOKIES)
-import logger from 'morgan';               //módulo ára registrar las peticiones que se realizan al servidor
+import logger from 'morgan'              //módulo ára registrar las peticiones que se realizan al servidor
 import cors from 'cors'                    //módulo para permitir orígenes cruzados (front con el back)
-import {__dirname} from './utils.js';
+import {__dirname} from './utils.js'
 
-import indexRouter from './routes/index.js';  //enrutador principal de la aplicación
+import indexRouter from './routes/index.js'  //enrutador principal de la aplicación
 
 let app = express();                      //defino una variable con la ejecucoón del módulo de express para poder CREAR un servidor
 
 // view engine setup
 //set es un método que CONFIGURA algo
-app.set('views', path.join(__dirname, 'views')); //configuro que las vistas generadas en el backend están en la carpeta VIEWS
+app.set('views', path.join(__dirname, 'views')) //configuro que las vistas generadas en el backend están en la carpeta VIEWS
 app.set('view engine', 'ejs');                   //configuro que las vistas se van a definir con el lenguaje EJS (motor de planilla)
 
 //MIDDLEWARES
