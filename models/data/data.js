@@ -712,6 +712,7 @@ let insert_mangas = async()=> {
             chapter.cover_photo = chapter.pages[0]
             await Chapter.create(chapter)
         }
+        console.log(manga.title+' created')
     }
     console.log('done!')
 }
